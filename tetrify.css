@@ -1,0 +1,70 @@
+#dropArea {
+    border: 2px dashed #bbb;
+    
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 25px;
+    width: 600px;
+    height: 400px;
+    align: center;
+    text-align: center;
+    /* font: 20pt bold 'Courier'; */
+    font-size: 20pt;
+    font-family: "Courier";
+    font-style: bold;
+    color: #bbb;
+    
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translateX(-50%) translateY(-50%); */
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align: center;
+
+}
+
+.droppedImage {
+    max-width: 800px;
+    max-height: 600px;
+ 
+}
+
+#stack {
+    justify-content:center;
+    align-items:center;  
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 30pt;
+    font-family: "Courier";
+    font-style: italic;
+    color: red;
+}
+
+.output {
+    padding: 25px;
+    max-width: 600px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    
+    align: center;
+    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;  
+
+}
