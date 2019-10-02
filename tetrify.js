@@ -32,15 +32,14 @@ function preprocessImage(image) {
     var w = image.width;
     var h = image.height;
     //    var minSquareSize = Math.round(Math.min(w, h) * minSquareSizeRatio);
-    var minSquareSize = defaultMinSquareSize;
-        
+    var minSquareSize = Math.min(defaultMinSquareSize, w, h);
+    //
     var computeGCD = function(a, b) {
         if ( ! b) {
             return a;
         }
         return computeGCD(b, a % b);
     };
-    // console.log('old size:' + w + ' ' + h);
     var gcd = computeGCD(w, h);
     var result = [w, h];
     if (gcd < minSquareSize) {
@@ -242,7 +241,7 @@ function drawContours(canvas, shapes) {
         var shape = shapes[s];
         var contour = shape.contour();
         context.strokeStyle = strokeStyle;
-        context.lineWidth = lineWidth;
+        context.lineWidth = Math.min(lineWidth, 0.15 * squareSize);
         context.beginPath();
         begin = true;
         for (var p=0; p < contour.length; p++) {
