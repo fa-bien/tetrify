@@ -76,4 +76,5 @@ function addCanvasToDocument(canvas) {
         ['<img id="output" class="droppedImage" src="',
          canvas.toDataURL(currentImageType),
          '" title="tetrified"/>'].join('');
+    console.log(document.getElementById('dropArea'));
 }
